@@ -20,6 +20,8 @@ def get_audio():
     with open(file_path, 'r') as f:
         body = f.read()
     os.remove(file_path)
+    url_parsed = url.split("/")
+    filename = url_parsed[-1] if url_parsed[-1] != '' or len(url_parsed)== 1 else url_parsed[-2]
     rsp = make_response(body)
-    rsp.headers["Content-Disposition"] = "attachment; filename=%s" % os.path.basename(file_path)
+    rsp.headers["Content-Disposition"] = "attachment; filename=%s.mp3" % os.path.basename(filename)
     return rsp
