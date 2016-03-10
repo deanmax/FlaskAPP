@@ -1,0 +1,8 @@
+{% extends "index.html" %}
+{% block form %}
+  <form action="/get_audio" method="post" name="download">
+      Quizlet page url:<br>
+      <input style="width:300px;" type="text" name="url" value="https://quizlet.com/121807831/4-flash-cards/"><br>
+      <input type="submit" value="Download">
+  </form>
+{% endblock %}
