@@ -26,6 +26,8 @@ def index():
 def get_audio():
     url = request.form["url_1"]
     audio_urls = ap.get_audio_urls(url)
+    if not audio_urls:
+        return make_response("Error: No audio found")
     file_path = ap.generate_combined_audio(audio_urls)
     return send_response(url, file_path)
 
@@ -33,5 +35,7 @@ def get_audio():
 def get_starred_audio():
     url = request.form["url_2"]
     audio_urls = ap.get_starred_audio_urls(url)
+    if not audio_urls:
+        return make_response("Error: No audio found")
     file_path = ap.generate_combined_audio(audio_urls)
     return send_response(url, file_path)
