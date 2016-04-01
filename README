@@ -1,1 +1,4 @@
 A Simple Flask Application
+
+Run within Docker:
+    docker run -e LD_LIBRARY_PATH='/usr/local/lib' -p 80:5000 -d rwang/flaskapp
