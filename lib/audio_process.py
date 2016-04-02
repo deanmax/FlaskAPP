@@ -14,7 +14,7 @@ def get_audio_urls(url):
 def get_starred_audio_urls(url):
     browser = webdriver.Firefox()
     browser.set_window_size(1920, 1080)
-    browser.get("https://quizlet.com/_20kjze")
+    browser.get(url)
     browser.find_element_by_id("show-login").click()
     username = browser.find_element_by_id("username1")
     password = browser.find_element_by_id("password1")
