@@ -23,6 +23,7 @@ def get_starred_audio_urls(url):
     browser.find_element_by_css_selector(".submit.button").click()
 
     page_source = browser.page_source
+    browser.close()
     pat = re.compile(r'<div.+?\sselected\s.+?>')
     urls = pat.findall(page_source, re.I)
 
