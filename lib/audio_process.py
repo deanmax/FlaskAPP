@@ -15,12 +15,18 @@ def get_starred_audio_urls(url):
     browser = webdriver.Firefox()
     browser.set_window_size(1920, 1080)
     browser.get(url)
-    browser.find_element_by_id("show-login").click()
-    username = browser.find_element_by_id("username1")
-    password = browser.find_element_by_id("password1")
-    username.send_keys("wnfrdshao")
-    password.send_keys("Ws20100915")
-    browser.find_element_by_css_selector(".submit.button").click()
+
+    # Login quizlet
+    try:
+        browser.find_element_by_id("show-login").click()
+        username = browser.find_element_by_id("username1")
+        password = browser.find_element_by_id("password1")
+        username.send_keys("wnfrdshao")
+        password.send_keys("Ws20100915")
+        browser.find_element_by_css_selector(".submit.button").click()
+    except Exception:
+        browser.close()
+        return []
 
     page_source = browser.page_source
     browser.close()
