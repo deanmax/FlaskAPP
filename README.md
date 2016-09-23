@@ -1,4 +1,5 @@
 [![](https://images.microbadger.com/badges/image/rwang/flaskapp.svg)](https://microbadger.com/images/rwang/flaskapp "Get your own image badge on microbadger.com")
+
 A Simple Flask Application
 
 Run within Docker:
