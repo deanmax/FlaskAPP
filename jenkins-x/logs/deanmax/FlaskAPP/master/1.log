@@ -1,0 +1,41 @@
+
+Showing logs for build [32mdeanmax-flaskapp-master-cqmn2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-dt4fc[0m
+{"level":"warn","ts":1583453420.7410023,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583453420.7425277,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mdeanmax-flaskapp-master-cqmn2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-hcf8f[0m
+{"level":"warn","ts":1583453421.6332028,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1583453421.634366,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mdeanmax-flaskapp-master-cqmn2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mdeanmax-flaskapp-master-cqmn2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-deanmax-flaskapp-master-cqmn2-6rnrz[0m
+{"level":"warn","ts":1583453472.7632887,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583453474.0527844,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*******/FlaskAPP.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32mdeanmax-flaskapp-master-cqmn2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:0f8d6e5af5e407116e03ae4a1b794ae34b1c94de
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mdeanmax-flaskapp-master-cqmn2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mdeanmax-flaskapp-master-cqmn2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-python-unittest[0m
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+
+Showing logs for build [32mdeanmax-flaskapp-master-cqmn2-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image rwang/centos-flask    
+ERROR: logging before flag.Parse: E0306 00:11:17.891242       9 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0306 00:11:17.896441       9 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+2020/03/06 00:11:17 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0000] Error while retrieving image from cache: getting file info: stat /workspace/sha256:e4e800dcdea11c372558249be3a9c8cea06bc9ac6e07f7ddd6975e9fbde136fd: no such file or directory 
+[36mINFO[0m[0000] Downloading base image rwang/centos-flask    
+2020/03/06 00:11:18 No matching credentials were found, falling back on anonymous
+error building image: unsupported status code 404; body: 404 page not found
+
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-container-build'. The execution of the pipeline has stopped.[0m
